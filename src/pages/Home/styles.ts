@@ -6,6 +6,7 @@ export const HomeContainer = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   form {
     display: flex;
     flex-direction: column;
@@ -35,10 +36,12 @@ const BaseInput = styled.input`
   font-size: 1.125rem;
   padding: 0 0.5rem;
   color: ${(props) => props.theme['gray-100']};
+
   &:focus {
     box-shadow: none;
     border-color: ${(props) => props.theme['green-500']};
   }
+
   &::placeholder {
     color: ${(props) => props.theme['gray-500']};
   }
@@ -46,6 +49,10 @@ const BaseInput = styled.input`
 
 export const TaskInput = styled(BaseInput)`
   flex: 1;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 `;
 
 export const MinutesAmountInput = styled(BaseInput)`
@@ -59,6 +66,7 @@ export const CountdownContainer = styled.div`
   font-size: 10rem;
   line-height: 8rem;
   color: ${(props) => props.theme['gray-100']};
+
   span {
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
@@ -86,10 +94,12 @@ export const StartCountdownButton = styled.button`
   cursor: pointer;
   background: ${(props) => props.theme['green-500']};
   color: ${(props) => props.theme['gray-100']};
+
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
   }
+
   &:not(:disabled):hover {
     background: ${(props) => props.theme['green-700']};
   }
