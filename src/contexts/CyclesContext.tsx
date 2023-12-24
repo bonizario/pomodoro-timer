@@ -51,7 +51,7 @@ export function CyclesContextProvider({
       task: data.task,
     } satisfies Cycle;
 
-    setCycles((prevCycles) => [...prevCycles, newCycle]);
+    setCycles((prevCycles) => [newCycle, ...prevCycles]);
     setActiveCycleId(id);
     setElapsedSeconds(0);
   }
