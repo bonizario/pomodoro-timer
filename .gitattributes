@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+
+*.js linguist-vendored
+*.cjs linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
