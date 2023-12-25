@@ -29,7 +29,7 @@ export function Countdown() {
       interval = window.setInterval(() => {
         const elapsedSecondsSinceStart = differenceInSeconds(
           new Date(),
-          activeCycle.startDate,
+          new Date(activeCycle.startDate),
         );
 
         if (elapsedSecondsSinceStart >= totalSeconds) {
